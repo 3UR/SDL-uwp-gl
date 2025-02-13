@@ -369,7 +369,7 @@ endmacro()
 # - HAVE_SDL_LOADSO opt
 macro(CheckLibSampleRate)
   if(SDL_LIBSAMPLERATE)
-    find_package(SampleRate QUIET)
+    find_package(SampleRate CONFIG REQUIRED)
     if(SampleRate_FOUND AND TARGET SampleRate::samplerate)
       set(HAVE_LIBSAMPLERATE TRUE)
       set(HAVE_LIBSAMPLERATE_H TRUE)
